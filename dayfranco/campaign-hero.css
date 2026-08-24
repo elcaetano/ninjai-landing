@@ -101,6 +101,42 @@
 
 .campaignHero figcaption > a b { color: var(--pink); margin-left: 10px; }
 
+@media (min-width: 801px) and (max-height: 760px) {
+  .program {
+    padding-top: 44px;
+    padding-bottom: 32px;
+  }
+
+  .program .sectionTitle {
+    margin-bottom: 24px;
+  }
+
+  .program .sectionTitle .eyebrow {
+    margin-bottom: 12px;
+  }
+
+  .program .sectionTitle h2 {
+    font-size: clamp(40px, 4vw, 54px);
+    line-height: 1;
+  }
+
+  .program .modules article {
+    min-height: 158px;
+    padding: 17px 24px;
+  }
+
+  .program .modules h3 {
+    margin: 22px 0 7px;
+    font-size: 21px;
+  }
+
+  .program .modules p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+}
+
 @media (max-width: 800px) {
   .heroCopy {
     min-height: calc(100svh - 66px);
