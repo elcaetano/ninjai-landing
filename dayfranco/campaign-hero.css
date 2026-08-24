@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+.campaignHero {
+  height: min(62vw, 720px);
+  max-height: calc(100vh - 72px);
+  min-height: 560px;
+  background: #0a0506;
+}
+
+.campaignHero::after {
+  background: linear-gradient(90deg, transparent 0 42%, rgba(9, 7, 7, .05) 55%, rgba(9, 7, 7, .34) 100%);
+}
+
+.campaignHero img {
+  object-position: center center;
+}
+
+.campaignHero figcaption {
+  inset: 0 0 0 52%;
+  padding: clamp(36px, 5vw, 72px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: var(--paper);
+}
+
+.campaignLogo {
+  width: min(330px, 100%);
+  margin-bottom: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #e7bf83;
+  line-height: 1;
+}
+
+.campaignLogo span {
+  margin: 0 0 -8px;
+  color: #e9c791;
+  font: clamp(48px, 5vw, 76px)/.9 'Allura', cursive;
+  transform: rotate(-3deg);
+}
+
+.campaignLogo strong {
+  color: #f0d3a6;
+  font: 500 clamp(22px, 2.3vw, 35px)/1 'Playfair Display', serif;
+  letter-spacing: .22em;
+}
+
+.campaignLogo small {
+  margin-top: 7px;
+  color: rgba(238, 210, 166, .72);
+  font: 600 10px/1 'DM Sans', sans-serif;
+  letter-spacing: .28em;
+}
+
+.campaignHero figcaption p {
+  margin: 0;
+  max-width: 520px;
+  color: #f7eee7;
+  font: 600 clamp(25px, 3.1vw, 43px)/1.15 'Playfair Display', serif;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+}
+
+.campaignHero figcaption p em {
+  color: #ef2a8a;
+  font-style: normal;
+}
+
+.campaignHero figcaption > a {
+  margin-top: 34px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--gold);
+  color: #ead9cb;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.campaignHero figcaption > a b { color: var(--pink); margin-left: 10px; }
+
+@media (max-width: 800px) {
+  .campaignHero {
+    height: auto;
+    min-height: 760px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .campaignHero::after {
+    background: linear-gradient(180deg, transparent 0 48%, rgba(9, 7, 7, .2) 58%, #090707 75%);
+  }
+
+  .campaignHero img {
+    height: 500px;
+    flex: 0 0 500px;
+    object-fit: cover;
+    object-position: 35% center;
+  }
+
+  .campaignHero figcaption {
+    position: relative;
+    inset: auto;
+    z-index: 2;
+    padding: 32px 24px 42px;
+    align-items: center;
+    text-align: center;
+    background: #090707;
+  }
+
+  .campaignLogo { margin-bottom: 25px; }
+  .campaignLogo span { font-size: 58px; }
+  .campaignLogo strong { font-size: 25px; }
+  .campaignHero figcaption p { font-size: clamp(24px, 8vw, 34px); }
+  .campaignHero figcaption > a { margin-top: 28px; }
+}
