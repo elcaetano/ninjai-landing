@@ -1,0 +1,33 @@
+.mentorGrid {
+  grid-template-columns: .72fr 1.28fr;
+  gap: 0;
+  align-items: stretch;
+  border: 1px solid var(--gold);
+  padding: 1px 0 1px 1px;
+}
+
+.mentorGrid > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 68px 70px;
+}
+
+.mentorPhoto {
+  height: 620px;
+}
+
+@media (max-width: 800px) {
+  .mentorGrid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .mentorGrid > div:last-child {
+    padding: 42px 24px;
+  }
+
+  .mentorPhoto {
+    height: 480px;
+  }
+}
