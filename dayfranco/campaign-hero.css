@@ -13,6 +13,7 @@
   height: min(56vw, calc(100svh - 112px), 620px);
   max-height: none;
   min-height: 500px;
+  margin-bottom: 84px;
   background: #0a0506;
 }
 
@@ -109,6 +110,7 @@
   .campaignHero {
     height: auto;
     min-height: 760px;
+    margin-bottom: 52px;
     display: flex;
     flex-direction: column;
   }
