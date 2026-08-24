@@ -121,12 +121,12 @@
   }
 
   .program .modules article {
-    min-height: 158px;
-    padding: 17px 24px;
+    min-height: 175px;
+    padding: 21px 24px;
   }
 
   .program .modules h3 {
-    margin: 22px 0 7px;
+    margin: 27px 0 8px;
     font-size: 21px;
   }
 
