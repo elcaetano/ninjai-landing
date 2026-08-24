@@ -1,3 +1,7 @@
+.mentor {
+  padding: 48px 0;
+}
+
 .mentorGrid {
   grid-template-columns: .72fr 1.28fr;
   gap: 0;
@@ -10,14 +14,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 68px 70px;
+  padding: 46px 58px;
 }
 
 .mentorPhoto {
-  height: 620px;
+  height: min(520px, calc(100vh - 120px));
+  min-height: 460px;
 }
 
 @media (max-width: 800px) {
+  .mentor {
+    padding: 70px 0;
+  }
+
   .mentorGrid {
     grid-template-columns: 1fr;
     gap: 0;
@@ -29,5 +38,6 @@
 
   .mentorPhoto {
     height: 480px;
+    min-height: 0;
   }
 }
