@@ -1,0 +1,54 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = [
+    ['01', 'Início', '.hero'],
+    ['02', 'Inscrição', '.application'],
+    ['03', 'Para você', '.recognition'],
+    ['04', 'História real', '.testimonial'],
+    ['05', 'A mentoria', '.program'],
+    ['06', 'Day Franco', '.mentor'],
+    ['07', 'Dúvidas', '.faq'],
+  ];
+
+  const button = document.createElement('button');
+  button.className = 'dayMenuButton';
+  button.type = 'button';
+  button.setAttribute('aria-label', 'Abrir menu');
+  button.setAttribute('aria-expanded', 'false');
+  button.setAttribute('aria-controls', 'day-menu');
+  button.innerHTML = '<span></span><span></span><span></span><span></span>';
+
+  const menu = document.createElement('nav');
+  menu.className = 'dayMenu';
+  menu.id = 'day-menu';
+  menu.setAttribute('aria-label', 'Seções da página');
+  menu.innerHTML = `
+    <div class="dayMenuIntro"><small>Mentoria presencial</small><strong>Cada escolha<br>abre um novo<br>caminho.</strong></div>
+    <ol class="dayMenuLinks">${sections.map(([number, label, selector]) => `<li><a href="${selector}" data-section="${selector}"><small>${number}</small><span>${label}</span><i>→</i></a></li>`).join('')}</ol>`;
+
+  document.body.append(button, menu);
+
+  const setOpen = (open) => {
+    menu.classList.toggle('open', open);
+    document.body.classList.toggle('menuOpen', open);
+    button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    if (open) menu.querySelector('a')?.focus();
+  };
+
+  button.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menu.classList.contains('open')) {
+      setOpen(false);
+      button.focus();
+    }
+  });
+
+  menu.querySelectorAll('[data-section]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const target = document.querySelector(link.dataset.section);
+      setOpen(false);
+      window.setTimeout(() => target?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
+    });
+  });
+});
