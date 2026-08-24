@@ -138,6 +138,7 @@
   }
 
   .faq {
+    min-height: 100svh;
     padding-top: 52px;
     padding-bottom: 40px;
   }
