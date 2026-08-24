@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ['02', 'Sucesso', '.campaignHero'],
     ['03', 'Inscrição', '.application'],
     ['04', 'Para você', '.recognition'],
-    ['05', 'História real', '.testimonial'],
+    ['05', 'História real', '.recognition .statement'],
     ['06', 'A mentoria', '.program'],
     ['07', 'Day Franco', '.mentor'],
     ['08', 'Dúvidas', '.faq'],
@@ -50,9 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(link.dataset.section);
       setOpen(false);
       window.setTimeout(() => {
-        target?.scrollIntoView({
+        if (!target) return;
+        const fitsViewport = target.getBoundingClientRect().height <= window.innerHeight * .9;
+        const keepsContext = link.dataset.section === '.recognition .statement';
+        target.scrollIntoView({
           behavior: 'smooth',
-          block: window.innerWidth > 800 ? 'center' : 'start',
+          block: window.innerWidth > 800 && fitsViewport && !keepsContext ? 'center' : 'start',
         });
       }, 120);
     });
