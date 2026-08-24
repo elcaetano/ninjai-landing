@@ -51,6 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
       setOpen(false);
       window.setTimeout(() => {
         if (!target) return;
+        if (window.innerWidth > 800 && link.dataset.section === '.recognition') {
+          const sectionTop = target.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({ top: sectionTop + 84, behavior: 'smooth' });
+          return;
+        }
         const fitsViewport = target.getBoundingClientRect().height <= window.innerHeight * .9;
         const keepsContext = link.dataset.section === '.recognition .statement';
         target.scrollIntoView({
