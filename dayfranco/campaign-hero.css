@@ -135,6 +135,23 @@
     font-size: 14px;
     line-height: 1.45;
   }
+
+  .faq {
+    padding-top: 52px;
+    padding-bottom: 40px;
+  }
+
+  .faq .sectionTitle {
+    margin-bottom: 34px;
+  }
+
+  .faq .sectionTitle .eyebrow {
+    margin-bottom: 12px;
+  }
+
+  .faq summary {
+    padding: 18px 0;
+  }
 }
 
 @media (max-width: 800px) {
