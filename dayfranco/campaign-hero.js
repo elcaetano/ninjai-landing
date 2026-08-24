@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   hero.classList.add('campaignHero');
   const image = hero.querySelector('img');
-  image.src = '/dayfranco/hero-seated-day-franco.png';
+  image.src = '/dayfranco/hero-seated-day-franco-v2.png';
   image.alt = 'Day Franco sentada em uma poltrona, com pernas cruzadas e mãos sobre o joelho';
 
   hero.querySelector('figcaption').innerHTML = `

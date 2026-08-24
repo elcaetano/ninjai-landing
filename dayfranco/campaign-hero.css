@@ -21,8 +21,16 @@
 }
 
 .campaignHero img {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
+}
+
+.recognition {
+  padding-bottom: 46px;
+}
+
+.recognition .statement {
+  margin-top: 118px;
 }
 
 .campaignHero figcaption {
@@ -131,4 +139,12 @@
   .campaignLogo strong { font-size: 25px; }
   .campaignHero figcaption p { font-size: clamp(24px, 8vw, 34px); }
   .campaignHero figcaption > a { margin-top: 28px; }
+
+  .recognition {
+    padding-bottom: 42px;
+  }
+
+  .recognition .statement {
+    margin-top: 72px;
+  }
 }
