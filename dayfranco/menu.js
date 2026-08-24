@@ -28,15 +28,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.body.append(button, menu);
 
-  const setOpen = (open) => {
+  const setOpen = (open, focusFirst = false) => {
     menu.classList.toggle('open', open);
     document.body.classList.toggle('menuOpen', open);
     button.setAttribute('aria-expanded', String(open));
     button.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-    if (open) menu.querySelector('a')?.focus();
+    if (open && focusFirst) menu.querySelector('a')?.focus();
   };
 
-  button.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+  button.addEventListener('pointerenter', () => {
+    if (canHover.matches) setOpen(true);
+  });
+
+  button.addEventListener('click', () => {
+    const open = !menu.classList.contains('open');
+    setOpen(open, open);
+  });
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && menu.classList.contains('open')) {
       setOpen(false);

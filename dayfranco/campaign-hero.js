@@ -9,6 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
       <strong>STUDIO</strong>
       <small>NAILS ACADEMY</small>
     </div>
-    <p>De nail designer estagnada<br>a profissional <em>referência</em> —<br>em <em>2 dias de mentoria<br>presencial</em></p>
+    <p>De nail designer estagnada<br>a profissional <em>referência</em><br>em <em>2 dias de mentoria<br>presencial</em></p>
     <a href="#inscricao">Quero viver essa transformação <b>→</b></a>`;
 });
