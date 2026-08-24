@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 
+.heroCopy {
+  min-height: calc(100svh - 82px);
+  padding: 64px 0 92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .campaignHero {
   height: min(62vw, 720px);
   max-height: calc(100vh - 72px);
@@ -83,6 +92,11 @@
 .campaignHero figcaption > a b { color: var(--pink); margin-left: 10px; }
 
 @media (max-width: 800px) {
+  .heroCopy {
+    min-height: calc(100svh - 66px);
+    padding: 52px 0 74px;
+  }
+
   .campaignHero {
     height: auto;
     min-height: 760px;
