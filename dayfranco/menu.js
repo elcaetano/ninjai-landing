@@ -49,7 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
       event.preventDefault();
       const target = document.querySelector(link.dataset.section);
       setOpen(false);
-      window.setTimeout(() => target?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
+      window.setTimeout(() => {
+        target?.scrollIntoView({
+          behavior: 'smooth',
+          block: window.innerWidth > 800 ? 'center' : 'start',
+        });
+      }, 120);
     });
   });
 });
