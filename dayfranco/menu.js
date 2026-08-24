@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   const sections = [
-    ['01', 'Início', '.hero'],
-    ['02', 'Inscrição', '.application'],
-    ['03', 'Para você', '.recognition'],
-    ['04', 'História real', '.testimonial'],
-    ['05', 'A mentoria', '.program'],
-    ['06', 'Day Franco', '.mentor'],
-    ['07', 'Dúvidas', '.faq'],
+    ['01', 'Início', '.heroCopy'],
+    ['02', 'Sucesso', '.campaignHero'],
+    ['03', 'Inscrição', '.application'],
+    ['04', 'Para você', '.recognition'],
+    ['05', 'História real', '.testimonial'],
+    ['06', 'A mentoria', '.program'],
+    ['07', 'Day Franco', '.mentor'],
+    ['08', 'Dúvidas', '.faq'],
   ];
 
   const button = document.createElement('button');
