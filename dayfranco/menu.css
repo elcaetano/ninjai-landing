@@ -100,7 +100,7 @@
 .dayMenuLinks i { color: var(--pink); font: 20px 'DM Sans', sans-serif; }
 
 body.menuOpen { overflow: hidden; }
-.heroCopy, .campaignHero, .application, .recognition, .testimonial, .program, .mentor, .faq, .finalCta { scroll-margin-top: 0; }
+.hero, .campaignHero, .application, .recognition, .testimonial, .program, .mentor, .faq, .finalCta { scroll-margin-top: 0; }
 .recognition .statement { scroll-margin-top: 36px; }
 
 @media (max-height: 760px) and (min-width: 801px) {

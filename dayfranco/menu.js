@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const sections = [
-    ['01', 'Início', '.heroCopy'],
+    ['01', 'Início', '.hero'],
     ['02', 'Sucesso', '.campaignHero'],
     ['03', 'Inscrição', '.application'],
     ['04', 'Para você', '.recognition'],
