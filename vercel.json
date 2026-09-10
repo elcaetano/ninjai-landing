@@ -1,5 +1,6 @@
 {
   "rewrites": [
-    { "source": "/barber/:path*", "destination": "https://barber.ninjai.com.br/barber/:path*" }
+    { "source": "/barber/:path*", "destination": "https://barber.ninjai.com.br/barber/:path*" },
+    { "source": "/_next/:path*", "destination": "https://barber.ninjai.com.br/_next/:path*" }
   ]
 }
