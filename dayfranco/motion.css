@@ -25,6 +25,7 @@
 .modules article:hover span,.signs article:hover span{transform:translateX(6px)}
 .button span{display:inline-block;transition:transform .45s cubic-bezier(.2,.7,.1,1)}
 .button:hover span{transform:translateX(5px)}
+.campaignHero figcaption>a{border-bottom:0;padding-bottom:0}
 .campaignHero figcaption>a b{display:inline-block;transition:transform .45s cubic-bezier(.2,.7,.1,1)}
 .campaignHero figcaption>a:hover b{transform:translateX(6px)}
 .faq summary span{display:inline-block;color:var(--pink);transition:transform .5s cubic-bezier(.2,.7,.1,1)}
