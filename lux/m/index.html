@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LU.X Aesthetics Center | Estética Médica & Laser, Campo Grande, MS</title>
+<meta name="description" content="LU.X Aesthetics Center: estética médica, endocrinologia e metabologia e rejuvenescimento a laser em Campo Grande, MS.">
+<meta name="theme-color" content="#5cc4bd">
+<link rel="icon" href="/lux/assets/logo-lux-DzNtlmBt.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#141310;--paper:#fcf9f4;--sand:#f6f3ee;--teal:#5cc4bd;--bronze:#6c5c45;--gold:#f6dfc2;--text:#4a463f;--line:rgba(204,197,188,.45)}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--paper);color:var(--text);line-height:1.6;font-size:16px;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500;color:var(--ink);line-height:1.12;letter-spacing:-.01em}
+.wrap{padding:0 22px}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--bronze)}
+.sub{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--text);margin:4px 0 12px}
+h2{font-size:32px;margin-bottom:14px}
+h2 em,h1 em{color:var(--teal);font-style:normal}
+.rule{width:56px;height:2px;background:var(--teal);margin:4px 0 18px}
+section{padding:56px 0}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:54px;padding:0 20px;border-radius:12px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.light{background:#fff;color:var(--ink)}
+.btn.wa{background:#0f7a4f;color:#fff}
+.btn.ghost{border:1px solid var(--line);color:var(--ink)}
+
+/* topo */
+.top{position:fixed;inset:0 0 auto 0;height:60px;z-index:50;background:var(--teal);display:flex;align-items:center;justify-content:space-between;padding:0 14px 0 0;box-shadow:0 4px 18px rgba(20,19,16,.18)}
+.top img{height:60px;width:auto;background:var(--teal);padding:6px 10px}
+.burger{width:48px;height:48px;border:0;background:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer}
+.burger i{display:block;width:24px;height:2px;background:var(--ink);transition:transform .3s,opacity .2s}
+.burger[aria-expanded=true] i:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded=true] i:nth-child(2){opacity:0}
+.burger[aria-expanded=true] i:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.drawer{position:fixed;inset:60px 0 0 0;z-index:49;background:var(--teal);padding:18px 22px calc(24px + env(safe-area-inset-bottom));overflow-y:auto;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s}
+.drawer.open{opacity:1;transform:none;visibility:visible}
+.drawer a.l{display:flex;align-items:center;min-height:54px;border-bottom:1px solid rgba(20,19,16,.12);font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.drawer .btn{margin-top:20px}
+body.lock{overflow:hidden}
+
+/* hero */
+.hero{overflow:hidden;position:relative;min-height:100svh;padding:0;background:var(--ink);color:#fff;display:flex;align-items:flex-end}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% center;opacity:.9}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,19,16,.25) 0%,rgba(20,19,16,.2) 25%,rgba(20,19,16,.92) 78%)}
+.hero .in{position:relative;z-index:2;padding:96px 22px 96px;width:100%}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{color:#fff;font-size:44px;margin:10px 0 16px}
+.hero h1 em{font-style:italic}
+.hero p{color:rgba(255,255,255,.88);font-size:16px;margin-bottom:24px}
+.hero .btns{display:grid;gap:12px}
+.hero .btn.ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);text-align:center}
+.stats b{display:block;font-family:'Playfair Display',serif;font-size:24px;font-weight:500;color:#fff}
+.stats span{display:block;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);font-weight:600;line-height:1.3}
+
+/* manifesto */
+.sand{background:var(--sand)}
+.manifesto p.lead{font-size:17px;margin-bottom:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:14px}
+.card h3{font-size:20px;margin-bottom:4px}
+.card p{font-size:14.5px}
+.fig{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;margin-top:24px;background:#eee}
+.fig img{width:100%;height:100%;object-fit:cover}
+.fig:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,19,16,.75),transparent 55%)}
+.fig figcaption{position:absolute;z-index:2;left:18px;right:18px;bottom:18px;color:#fff}
+.fig figcaption small{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.fig figcaption span{font-family:'Playfair Display',serif;font-size:19px;line-height:1.25}
+
+/* tratamentos */
+.t{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-bottom:18px;box-shadow:0 8px 24px rgba(20,19,16,.06)}
+.t .ph{position:relative;aspect-ratio:16/11;background:#eee}
+.t .ph img{width:100%;height:100%;object-fit:cover}
+.t .n{position:absolute;top:12px;left:12px;background:rgba(252,249,244,.95);border-radius:8px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--ink)}
+.t .b{padding:18px 18px 20px}
+.t small{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze);font-weight:700}
+.t h3{font-size:24px;margin:4px 0 8px}
+.t p{font-size:14.5px;margin-bottom:12px}
+.t ul{list-style:none;border-top:1px solid var(--line);padding-top:12px;margin-bottom:16px}
+.t li{font-size:14px;padding:3px 0 3px 22px;position:relative}
+.t li:before{content:"";position:absolute;left:2px;top:12px;width:8px;height:8px;border-radius:50%;background:var(--teal)}
+.t .btn{min-height:48px}
+
+/* tecnologias */
+.tech{background:var(--ink);color:rgba(255,255,255,.8)}
+.tech h2,.tech h3{color:#fff}
+.tech .eyebrow{color:var(--gold)}
+.tech .sub{color:rgba(255,255,255,.7)}
+.tc{border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:22px;margin-bottom:16px;background:rgba(255,255,255,.04)}
+.tc .bd{display:inline-block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink);background:var(--gold);border-radius:99px;padding:4px 12px;margin-bottom:12px}
+.tc h3{font-size:22px;margin-bottom:8px}
+.tc p{font-size:14.5px}
+.tc ul{list-style:none;margin-top:12px}
+.tc li{font-size:13.5px;padding:3px 0 3px 20px;position:relative}
+.tc li:before{content:"";position:absolute;left:2px;top:11px;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+
+/* espaços */
+.sp{margin-bottom:22px}
+.sp .ph{border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:#eee;margin-bottom:12px}
+.sp img{width:100%;height:100%;object-fit:cover}
+.sp h3{font-size:22px}
+.sp small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--bronze);font-weight:700;margin:2px 0 6px}
+.sp p{font-size:14.5px}
+
+/* doutora */
+.doc .ph{border-radius:22px;overflow:hidden;aspect-ratio:3/4;position:relative;margin-bottom:24px;background:#eee}
+.doc .ph img{width:100%;height:100%;object-fit:cover}
+.doc .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,19,16,.8),transparent 50%)}
+.doc .ph div{position:absolute;z-index:2;left:20px;right:20px;bottom:20px;color:#fff}
+.doc .ph small{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.doc .ph h3{color:#fff;font-size:26px;margin:2px 0}
+.doc .ph span{font-size:12px;color:rgba(255,255,255,.8)}
+blockquote{background:var(--paper);border-left:4px solid var(--bronze);border-radius:0 16px 16px 0;padding:20px;font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#1c1c19;line-height:1.55}
+blockquote cite{display:block;margin-top:12px;font:700 11px 'Plus Jakarta Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--bronze);font-style:normal}
+
+/* depoimentos */
+.dp{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:14px}
+.dp .st{color:#c9a66b;letter-spacing:3px;font-size:15px;margin-bottom:8px}
+.dp q{display:block;font-family:'Playfair Display',serif;font-style:italic;font-size:17px;line-height:1.5;color:#1c1c19;quotes:none;margin-bottom:14px}
+.dp b{display:block;color:var(--ink);font-size:14px}
+.dp span{font-size:12.5px;color:var(--text)}
+
+/* agendamento */
+.concierge{display:grid;gap:12px;margin:22px 0}
+.concierge a{display:flex;align-items:center;gap:14px;background:var(--sand);border:1px solid var(--line);border-radius:16px;padding:16px;min-height:68px}
+.concierge i{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-style:normal;font-size:18px;flex:none}
+.concierge small{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--bronze)}
+.concierge strong{font-family:'Playfair Display',serif;font-size:19px;color:var(--ink);font-weight:500}
+form{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 14px 34px rgba(20,19,16,.08)}
+label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--bronze);margin:0 0 6px}
+.f{margin-bottom:16px}
+input,select,textarea{width:100%;min-height:52px;border:1px solid #d9d2c8;border-radius:12px;padding:12px 14px;font:inherit;font-size:16px;color:var(--ink);background:#fff;-webkit-appearance:none;appearance:none}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 20px) 22px,calc(100% - 14px) 22px;background-size:6px 6px;background-repeat:no-repeat;padding-right:38px}
+textarea{min-height:92px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--teal);outline-offset:1px}
+.per{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.per input{position:absolute;opacity:0;pointer-events:none}
+.per span{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:60px;border:1px solid #d9d2c8;border-radius:12px;font-size:13px;font-weight:700;color:var(--ink);line-height:1.25;text-transform:none;letter-spacing:0}
+.per small{font-weight:500;font-size:11px;color:var(--text)}
+.per label{margin:0;position:relative}
+.per input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}
+.per input:checked+span small{color:var(--gold)}
+.ok{display:flex;gap:10px;align-items:flex-start;font-size:13px;margin:4px 0 18px}
+.ok input{width:22px;min-height:22px;height:22px;margin-top:2px;flex:none;-webkit-appearance:auto;appearance:auto}
+.note{text-align:center;font-size:12px;margin-top:12px}
+
+/* rodapé */
+footer{background:var(--ink);color:rgba(255,255,255,.75);padding:40px 22px 28px;font-size:14px}
+footer .logo{font-family:'Playfair Display',serif;font-size:30px;letter-spacing:.2em;color:#fff}
+footer small.t1{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:14px}
+footer p{margin-bottom:10px}
+footer a.c{display:block;padding:6px 0;color:#fff}
+footer h4{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:22px 0 8px}
+footer .legal{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:11.5px;line-height:1.6;color:rgba(255,255,255,.5)}
+
+/* barra fixa */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:48;display:grid;grid-template-columns:1fr 1.4fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(252,249,244,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(20,19,16,.1)}
+.dock .btn{min-height:52px;font-size:12px}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}.rv.on{opacity:1;transform:none}
+.hero>img{animation:kb 18s ease-out both}@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
+.t .ph img,.sp img{transition:transform 1.2s cubic-bezier(.22,1,.36,1)}.t.on .ph img,.sp.on img{transform:scale(1.04)}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.hero>img{animation:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a href="#topo" aria-label="LU.X Aesthetics Center"><img src="/lux/assets/logo-lux-DzNtlmBt.png" alt="LU.X Aesthetics Center"></a>
+  <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
+</header>
+
+<nav class="drawer" id="drawer" aria-label="Menu">
+  <a class="l" href="#topo">Início</a>
+  <a class="l" href="#manifesto">Manifesto</a>
+  <a class="l" href="#tratamentos">Tratamentos</a>
+  <a class="l" href="#excelencia">Excelência</a>
+  <a class="l" href="#espacos">Espaço</a>
+  <a class="l" href="#sucesso">Sucesso</a>
+  <a class="l" href="#depoimentos">Depoimentos</a>
+  <a class="l" href="#agendamento">Contato</a>
+  <a class="btn dark" href="#agendamento">Agendar Avaliação Médica</a>
+</nav>
+
+<main id="topo">
+
+<section class="hero" style="padding:0">
+  <img src="/lux/assets/reception_dra_luciana_1789755919673-B8MvPHoE.jpg" alt="Recepção da Clínica LU.X Aesthetics Center" fetchpriority="high">
+  <div class="in">
+    <span class="eyebrow">Campo Grande, MS</span>
+    <h1>O cuidado está <em>nos detalhes.</em></h1>
+    <p>Mais de 20 anos de excelência médica, com biotecnologia de ponta e resultados naturalmente imperceptíveis na <strong>Clínica LU.X Aesthetics Center</strong>.</p>
+    <div class="btns">
+      <a class="btn light" href="#agendamento">Agendar avaliação</a>
+      <a class="btn ghost" href="#espacos">Conheça a clínica</a>
+    </div>
+    <div class="stats">
+      <div><b>+20</b><span>Anos de excelência</span></div>
+      <div><b>100%</b><span>Corpo médico especialista</span></div>
+      <div><b>0%</b><span>Downtime invasivo</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sand manifesto" id="manifesto">
+  <div class="wrap">
+    <span class="eyebrow">01 / Manifesto clínico</span>
+    <p class="sub">Tecnologia que respeita a sua essência</p>
+    <h2>Beleza não precisa parecer <em>artificial.</em></h2>
+    <div class="rule"></div>
+    <p class="lead">Acreditamos em resultados que valorizam aquilo que você já tem. Tecnologia, precisão médica e protocolos personalizados para uma transformação elegante, segura e natural.</p>
+    <div class="card"><h3>Ultra-Precisão</h3><p>Protocolos fracionados milimétricos com ajuste de micropulso guiado por scanner térmico instantâneo.</p></div>
+    <div class="card"><h3>Biocompatível</h3><p>Respeito absoluto ao manto hidrolipídico, restaurando a integridade celular sem agressão.</p></div>
+    <figure class="fig">
+      <img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC70FN6axTr_wX8xTMp31_ovd8Ps_BaXIkR_Kooge8-5M5wiFWuDW3ap9IvVRnzzhMN_y_DxK5aVlm-WeTfhkrf5nQCfCzFNrulLOqgdi-girFRE6MeVeloJ2FKpoOXq_yfiI5MsPpnRuIo1DG8Mm53AZVgzA1plwI2w7RhtlDBtHbZts5RSyyEBgD3ukFP3uqVDLzCVvSIzzKNhaljlecaaAEzKBVSK_4k-zEAtmF79mEP9lt2qZ7_dA" alt="Textura cutânea impecável com reflexos dourados">
+      <figcaption><small>Microscopia óptica</small><span>Densidade dérmica reorganizada em 28 dias.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="tratamentos">
+  <div class="wrap">
+    <span class="eyebrow">02 / Tratamentos</span>
+    <p class="sub">Protocolos médicos personalizados</p>
+    <h2>Cada pele, um <em>plano.</em></h2>
+    <div class="rule"></div>
+
+    <article class="t"><div class="ph"><img loading="lazy" src="/lux/assets/fotona_laser_treatment_1789756661687-BSARKPg4.jpg" alt="Médica aplicando laser facial"><span class="n">01</span></div><div class="b"><small>Laser multifuncional</small><h3>Laser</h3><p>Tecnologia avançada para tratamento da pele, flacidez, manchas, pelos e rejuvenescimento.</p><ul><li>Rejuvenescimento e viço</li><li>Tratamento de manchas e flacidez</li><li>Redução de pelos e poros</li></ul><a class="btn dark" href="#agendamento" data-i="laser">Agendar avaliação</a></div></article>
+
+    <article class="t"><div class="ph"><img loading="lazy" src="/lux/assets/hifu_contour_facial_1789742838374-DhU1AcxQ.jpg" alt="Ultrassom microfocado para contorno facial"><span class="n">02</span></div><div class="b"><small>Ultrassom microfocado</small><h3>Ultherapy Prime</h3><p>Lifting não invasivo, melhora a flacidez e estimula a produção de colágeno.</p><ul><li>Lifting não cirúrgico</li><li>Estímulo de colágeno</li><li>Melhora da flacidez facial</li></ul><a class="btn dark" href="#agendamento" data-i="ultherapy">Agendar avaliação</a></div></article>
+
+    <article class="t"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1746708810803-722593e53772?fm=jpg&q=80&w=1000&auto=format&fit=crop" alt="Aplicação de toxina botulínica"><span class="n">03</span></div><div class="b"><small>Bloqueio neuromuscular</small><h3>Toxina Botulínica</h3><p>Suaviza rugas e linhas de expressão, prevenindo o envelhecimento com aspecto natural.</p><ul><li>Suaviza linhas de expressão</li><li>Prevenção do envelhecimento</li><li>Resultado natural</li></ul><a class="btn dark" href="#agendamento" data-i="toxina">Agendar avaliação</a></div></article>
+
+    <article class="t"><div class="ph"><img loading="lazy" src="/lux/assets/laser_resurfacing_texture_1789743407700-D9X6znyh.jpg" alt="Renovação cutânea"><span class="n">04</span></div><div class="b"><small>Renovação cutânea</small><h3>Peeling Químico</h3><p>Renova as camadas da pele, melhora textura, viço, manchas e poros, para uma pele mais saudável e luminosa.</p><ul><li>Renovação celular</li><li>Melhora de textura e poros</li><li>Pele mais luminosa</li></ul><a class="btn dark" href="#agendamento" data-i="peeling">Agendar avaliação</a></div></article>
+
+    <article class="t"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1761819922656-d1b77eef49c0?fm=jpg&q=80&w=1000&auto=format&fit=crop" alt="Fios de sustentação"><span class="n">05</span></div><div class="b"><small>Fios de sustentação</small><h3>Fios</h3><p>Promovem lifting facial, estimulam o colágeno e redefinem os contornos.</p><ul><li>Lifting facial imediato</li><li>Redefinição de contornos</li><li>Estímulo de colágeno</li></ul><a class="btn dark" href="#agendamento" data-i="fios">Agendar avaliação</a></div></article>
+
+    <article class="t"><div class="ph"><img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4rYRiyiTD_MmFyOFN-0WEVCm0B2awYHdi9CRiMVrHzXs5t0NbrwoK3T6a08VoFcZ92iIyCL_rGE294azXjFZ_emFPdmpcX0srOr_M9CcXFQXaAlHQD13sZEry2_1tBJ5p4RXkNGF19rOAhcZagWVe8_xBy33qKVEZwrv78jFixJtDzKp3IXfvd8Co4nLeVqHQ_BASCE_hzpWJ0SsOWmXDSJmRc8kvUlVSqFOClpu-z-8_35dwjM4cmw" alt="Procedimento de rinomodelação"><span class="n">06</span></div><div class="b"><small>Preenchimento nasal</small><h3>Rinomodelação</h3><p>Técnica não cirúrgica que harmoniza o nariz, corrige imperfeições e valoriza o perfil.</p><ul><li>Sem cirurgia, sem cortes</li><li>Resultado imediato</li><li>Correção de imperfeições no perfil</li></ul><a class="btn dark" href="#agendamento" data-i="rinomodelacao">Agendar avaliação</a></div></article>
+
+    <article class="t"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1746017062285-13c77e29fc25?fm=jpg&q=80&w=1000&auto=format&fit=crop" alt="Preenchimento facial"><span class="n">07</span></div><div class="b"><small>Ácido hialurônico</small><h3>Preenchimento Facial</h3><p>Repara volumes, suaviza sulcos e rugas, devolvendo estrutura e harmonia à face.</p><ul><li>Reposição de volume facial</li><li>Suavização de sulcos</li><li>Harmonia e naturalidade</li></ul><a class="btn dark" href="#agendamento" data-i="preenchimento">Agendar avaliação</a></div></article>
+
+    <article class="t"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1761819921052-2c34973e012c?fm=jpg&q=80&w=1000&auto=format&fit=crop" alt="Bioestimulador de colágeno"><span class="n">08</span></div><div class="b"><small>Bioestimulador de colágeno</small><h3>Bioestimuladores</h3><p>Estimulam a produção natural de colágeno, melhorando firmeza, elasticidade e qualidade da pele de forma gradual.</p><ul><li>Firmeza progressiva da pele</li><li>Melhora da elasticidade</li><li>Resultado duradouro</li></ul><a class="btn dark" href="#agendamento" data-i="bioestimuladores">Agendar avaliação</a></div></article>
+  </div>
+</section>
+
+<section class="tech" id="excelencia">
+  <div class="wrap">
+    <span class="eyebrow">03 / Excelência</span>
+    <p class="sub">Tecnologia padrão ouro</p>
+    <h2>Plataformas de <em>alta precisão.</em></h2>
+    <div class="rule"></div>
+
+    <div class="tc"><span class="bd">Aprovada FDA / Anvisa</span><h3>Fotona Dual-Wave Erbium &amp; Nd:YAG</h3><p>Energia térmica multidimensional em camadas superficiais e profundas, com retração imediata e sem lesionar a camada córnea.</p><ul><li>Lifting da face média e terço inferior</li><li>Suavização de linhas periorais</li><li>Sustentação das maçãs do rosto</li><li>Tratamento indolor da flacidez palpebral</li></ul></div>
+    <div class="tc"><span class="bd">Picosegundos ultra-rápidos</span><h3>Picolaser Fracionado</h3><p>Pulsos em bilionésimos de segundo eliminam manchas sem calor, seguro para peles brasileiras.</p><ul><li>Melasma resistente a cremes e peelings</li><li>Hipercromias e lentigos solares</li><li>Uniformização de tom em fototipos altos</li></ul></div>
+    <div class="tc"><span class="bd">Navegação guiada em tempo real</span><h3>Ultraformer MPT</h3><p>Mapeamento térmico em tempo real da pele profunda para contração máxima sem desconforto.</p><ul><li>Definição da linha da mandíbula</li><li>Compactação da papada</li><li>Lifting da cauda da sobrancelha sem cirurgia</li></ul></div>
+  </div>
+</section>
+
+<section class="sand" id="espacos">
+  <div class="wrap">
+    <span class="eyebrow">04 / Espaço &amp; privacidade</span>
+    <p class="sub">Acolhimento em cada detalhe</p>
+    <h2>Um <em>espaço</em> pensado para você.</h2>
+    <div class="rule"></div>
+    <p style="margin-bottom:24px">Projetado para conforto, discrição e segurança em cada etapa do seu atendimento médico e estético.</p>
+
+    <div class="sp"><div class="ph"><img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQn2I-ACEs6pBSC4Jo9V1nEpFi_fjuLpchAWTJ4fju4IlbzowUOVkr3Hg22nIhWLVw8O0mIsUlMV31e75Err_hjCR2kqldrkOj-2wjGwWXBNHU0zPDaqNtg9564kJVs01Nalh8eBw33SgZqng1OQkunAM9JM5eSap3sHNTXoy2_F4Bg8ioZSkCm0-myMt0jM6Wnxy_DH1XmIxF6bs7DRUFcNyyM9YgwjMnMuhwuhs3m8LFkAF3sHniSQ" alt="Consultório Master 01"></div><h3>Consultório Master 01</h3><small>Análise tridimensional &amp; planejamento</small><p>Estação equipada para fotografia tridimensional e planejamento facial de alta precisão.</p></div>
+    <div class="sp"><div class="ph"><img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO2bqaQS8jb2paX-bJhKj1e2P6MtOeKyepVhlr_7h9ejnQGmIYUN734MOynjY2zpona3z5wb6Kon-5JhU1kYMni_M4hiH-jpl7QegcplMw93UKN-qf2BFCuhwbYKVBBDN-nVggBcHcE9KxnzPGL2A1lVIzFdqZP3mfq8SDQC741FmyYiwosb5JaAk3l-A_LddXLXRkOTiLVJdFyXU9jV3dZ7nQZtUyv8V45G2sKTkeKzqA7JFfYUyrDQ" alt="Lounge privativo de recuperação"></div><h3>Lounge Privativo de Recuperação</h3><small>Conforto e discrição pós-sessão</small><p>Iluminação atenuada, poltronas ergonômicas e seleção de chás.</p></div>
+    <div class="sp"><div class="ph"><img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQsGPUEP8H-oV645c4VTUcF1JlmkBVGRk11B5qVwKULcUn40XUDpBf7bmuHbrJDT0tnMCfOYpJxcnCDchLycQ7K6cQv2lr_0QH9_88H5I3iO-z5Q16u89o2e8xZqbGyD3NA6Uo2H8s7VmNWijxWNGoP3-NS7DzFdC0Twn_uYBm2i8k20VNDe8lISjVtHJdskzVALmIeM2GGM4LMve8Yu9FEn3laD6snwGjmhAtOjHBCSE5TeSOeL4GHg" alt="Suíte de tecnologias ópticas"></div><h3>Suíte de Tecnologias Ópticas</h3><small>Plataformas padrão ouro internacional</small><p>Proteção ocular integrada e climatização hospitalar rigorosa.</p></div>
+  </div>
+</section>
+
+<section class="doc" id="sucesso">
+  <div class="wrap">
+    <div class="ph"><img loading="lazy" src="/lux/assets/dra_luciana_matos_1789727096924-CSLPFN-3.jpg" alt="Dra. Luciana Matos"><div><small>Diretoria médica</small><h3>Dra. Luciana Matos</h3><span>CRM/MS 3226 · RQE 2457</span></div></div>
+    <span class="eyebrow">05 / Sucesso</span>
+    <p class="sub">Corpo clínico</p>
+    <h2>Por trás de cada resultado, experiência.</h2>
+    <div class="rule"></div>
+    <blockquote>"A medicina estética contemporânea não busca modificar traços, mas preservar a integridade celular e a luminosidade biológica que o tempo tende a desacelerar. Cada plano terapêutico é individualizado."<cite>Dra. Luciana Matos, Endocrinologia e Metabologia</cite></blockquote>
+  </div>
+</section>
+
+<section class="sand" id="depoimentos">
+  <div class="wrap">
+    <span class="eyebrow">06 / Depoimentos</span>
+    <p class="sub">Histórias reais</p>
+    <h2>Quem viveu, <em>recomenda.</em></h2>
+    <div class="rule"></div>
+    <div class="dp"><div class="st">★★★★★</div><q>O que mais me impressionou foi o compromisso com a naturalidade. Ninguém perguntou se fiz procedimento, apenas dizem que pareço descansada e luminosa.</q><b>Camila M. S.</b><span>Protocolo Fotona 4D · 39 anos</span></div>
+    <div class="dp"><div class="st">★★★★★</div><q>Lutei contra o melasma pós-gestacional por 5 anos sem sucesso. A abordagem em picosegundos sem aquecimento resolveu as manchas sem queimar minha pele.</q><b>Patricia F. Alencar</b><span>Laser Toning PicoSure · 44 anos</span></div>
+    <div class="dp"><div class="st">★★★★★</div><q>A discrição do atendimento e o diagnóstico computadorizado antes de qualquer sugestão mostram o respeito médico impecável que a clínica tem.</q><b>Roberto B. Mendes</b><span>Ultraformer MPT Mandibular · 51 anos</span></div>
+  </div>
+</section>
+
+<section id="agendamento">
+  <div class="wrap">
+    <span class="eyebrow">07 / Primeiro passo</span>
+    <p class="sub">Atendimento personalizado</p>
+    <h2>Sua jornada começa <em>aqui.</em></h2>
+    <div class="rule"></div>
+    <p>Nossa equipe concierge esclarece dúvidas, apresenta protocolos e reserva o melhor horário para sua consulta no Centro de Campo Grande, MS.</p>
+
+    <div class="concierge">
+      <a href="tel:+556733847274"><i style="background:var(--ink)">&#9990;</i><span><small>Concierge privativo LU.X</small><strong>(67) 3384-7274</strong></span></a>
+      <a href="https://wa.me/5567981219299?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20protocolos%20da%20Cl%C3%ADnica%20LU.X%20Aesthetics%20Center." target="_blank" rel="noopener"><i style="background:#0f7a4f">&#9993;</i><span><small>WhatsApp exclusivo</small><strong>(67) 98121-9299</strong></span></a>
+    </div>
+
+    <form id="form" novalidate>
+      <div class="f"><label for="nome">Nome completo</label><input id="nome" autocomplete="name" required placeholder="Seu nome"></div>
+      <div class="f"><label for="tel">WhatsApp</label><input id="tel" type="tel" inputmode="tel" autocomplete="tel" required placeholder="(67) 90000-0000"></div>
+      <div class="f"><label for="int">Interesse principal</label>
+        <select id="int">
+          <option value="Laser">Laser</option>
+          <option value="Ultherapy Prime">Ultherapy Prime</option>
+          <option value="Toxina Botulínica">Toxina Botulínica</option>
+          <option value="Peeling Químico">Peeling Químico</option>
+          <option value="Fios">Fios</option>
+          <option value="Rinomodelação">Rinomodelação</option>
+          <option value="Preenchimento Facial">Preenchimento Facial</option>
+          <option value="Bioestimuladores">Bioestimuladores</option>
+          <option value="Consulta de avaliação geral">Consulta de avaliação geral</option>
+        </select></div>
+      <div class="f"><label>Período de preferência</label>
+        <div class="per">
+          <label><input type="radio" name="per" value="Manhã" checked><span>Manhã<small>08h às 12h</small></span></label>
+          <label><input type="radio" name="per" value="Tarde"><span>Tarde<small>13h às 18h</small></span></label>
+          <label><input type="radio" name="per" value="Sábado"><span>Sábado<small>08h às 14h</small></span></label>
+        </div></div>
+      <div class="f"><label for="obs">Observações (opcional)</label><textarea id="obs" placeholder="Conte brevemente o que gostaria de melhorar"></textarea></div>
+      <label class="ok" style="text-transform:none;letter-spacing:0;font-weight:500;color:var(--text)"><input type="checkbox" id="lgpd" checked><span>Concordo com o contato do Concierge LU.X e com o tratamento ético dos meus dados segundo a LGPD.</span></label>
+      <button class="btn wa" type="submit" style="border:0;cursor:pointer">Solicitar agendamento pelo WhatsApp</button>
+      <p class="note">Retorno em até 1 hora durante o horário comercial.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="logo">LU.X</div>
+  <small class="t1">Aesthetics Center</small>
+  <p>Centro de excelência em estética médica, endocrinologia e metabologia e rejuvenescimento a laser.</p>
+  <a class="c" href="https://maps.google.com/?q=Rua+Joaquim+Murtinho,+513,+Centro,+Campo+Grande+MS" target="_blank" rel="noopener">Rua Joaquim Murtinho, 513, Centro, Campo Grande, MS</a>
+  <a class="c" href="https://wa.me/5567981219299" target="_blank" rel="noopener">WhatsApp (67) 98121-9299</a>
+  <a class="c" href="tel:+556733847274">Telefone (67) 3384-7274</a>
+  <a class="c" href="mailto:concierge@luxaesthetics.com.br">concierge@luxaesthetics.com.br</a>
+  <a class="c" href="https://www.instagram.com/dralucianadematos/" target="_blank" rel="noopener">Instagram @dralucianadematos</a>
+  <h4>Horários</h4>
+  <p><strong style="color:#fff">Segunda a sexta:</strong> 08h às 20h<br><strong style="color:#fff">Sábados:</strong> 08h às 14h</p>
+  <div class="legal">
+    <p><strong>Aviso legal ético-médico:</strong> Em cumprimento à Resolução CFM nº 2.336/2023, as informações deste material têm finalidade exclusivamente informativa e educativa. Resultados variam de pessoa para pessoa e dependem de avaliação médica individual.</p>
+    <p><strong>Diretoria técnica responsável:</strong> Dra. Luciana Matos · CRM/MS 3226 · Endocrinologia e Metabologia, RQE 2457.</p>
+  </div>
+</footer>
+
+<div class="dock">
+  <a class="btn ghost" href="tel:+556733847274">Ligar</a>
+  <a class="btn wa" href="https://wa.me/5567981219299?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll(".card,.t,.tc,.sp,.dp,.fig,blockquote,h2,.concierge,form");els.forEach(function(e){e.classList.add("rv")});
+  if("IntersectionObserver"in window){var io=new IntersectionObserver(function(a){a.forEach(function(x){if(x.isIntersecting){x.target.classList.add("on");io.unobserve(x.target)}})},{threshold:.12,rootMargin:"0px 0px -6% 0px"});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add("on")})}
+  var b=document.getElementById('burger'),d=document.getElementById('drawer');
+  function set(o){d.classList.toggle('open',o);b.setAttribute('aria-expanded',o);document.body.classList.toggle('lock',o)}
+  b.addEventListener('click',function(){set(!d.classList.contains('open'))});
+  d.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+  var sel=document.getElementById('int');
+  document.querySelectorAll('[data-i]').forEach(function(a){a.addEventListener('click',function(){
+    var map={laser:'Laser',ultherapy:'Ultherapy Prime',toxina:'Toxina Botulínica',peeling:'Peeling Químico',fios:'Fios',rinomodelacao:'Rinomodelação',preenchimento:'Preenchimento Facial',bioestimuladores:'Bioestimuladores'};
+    sel.value=map[a.getAttribute('data-i')]||sel.value})});
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('nome'),t=document.getElementById('tel');
+    if(!n.value.trim()){n.focus();return}
+    if(t.value.replace(/\D/g,'').length<10){t.focus();return}
+    if(!document.getElementById('lgpd').checked)return;
+    var per=document.querySelector('input[name=per]:checked').value;
+    var msg='Olá, Concierge Clínica LU.X! Gostaria de agendar uma avaliação.\n\nNome: '+n.value.trim()+'\nInteresse: '+sel.value+'\nPreferência: '+per+'\nTelefone: '+t.value.trim();
+    var o=document.getElementById('obs').value.trim();if(o)msg+='\nObservações: '+o;
+    window.location.href='https://wa.me/5567981219299?text='+encodeURIComponent(msg);
+  });
+})();
+</script>
+</body>
+</html>
