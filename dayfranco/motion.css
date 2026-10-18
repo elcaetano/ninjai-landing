@@ -1,0 +1,56 @@
+.mv .heroPhoto .w{font-size:inherit;color:inherit;margin-top:0}
+.mv .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
+.mv .w>i{display:inline-block;font-style:inherit;transform:translateY(105%);transition:transform .9s cubic-bezier(.2,.7,.1,1);transition-delay:calc(var(--n)*55ms)}
+.mv .in .w>i,.mv .rvh.in .w>i{transform:none}
+.mv .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.7,.1,1);transition-delay:calc(var(--d,0)*70ms)}
+.mv .rv.in{opacity:1;transform:none}
+.mv .eyebrow.left{position:relative;padding-top:18px}
+.mv .eyebrow.left:before{content:'';position:absolute;top:0;left:0;width:44px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .9s cubic-bezier(.2,.7,.1,1)}
+.mv .eyebrow.left.in:before{transform:none}
+.mv .statement .sw{opacity:.22;transition:opacity .5s ease}
+.mv .statement .sw.lit{opacity:1}
+.mv .mentorPhoto{position:relative}
+.mv .mentorPhoto:after{content:'';position:absolute;inset:0;background:var(--cream);transform-origin:right;transition:transform 1.2s cubic-bezier(.7,0,.2,1)}
+.mv .mentorPhoto.in:after{transform:scaleX(0)}
+.mv .mentorPhoto img{transform:scale(1.08);transition:transform 1.6s cubic-bezier(.2,.7,.1,1)}
+.mv .mentorPhoto.in img{transform:none}
+.mv .quoteGrid blockquote{position:relative;border-left:0}
+.mv .quoteGrid blockquote:before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:#ffffff90;transform:scaleY(0);transform-origin:top;transition:transform 1.3s .2s cubic-bezier(.2,.7,.1,1)}
+.mv .quoteGrid blockquote.in:before{transform:none}
+.modules article{position:relative;transition:background .5s ease}
+.modules article:before{content:'';position:absolute;left:-1px;top:-1px;right:-1px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .7s cubic-bezier(.2,.7,.1,1)}
+.modules article:hover:before{transform:none}
+.modules article:hover{background:#ffffff08}
+.modules span,.signs article span{display:inline-block;transition:transform .5s cubic-bezier(.2,.7,.1,1)}
+.modules article:hover span,.signs article:hover span{transform:translateX(6px)}
+.button span{display:inline-block;transition:transform .45s cubic-bezier(.2,.7,.1,1)}
+.button:hover span{transform:translateX(5px)}
+.campaignHero figcaption>a b{display:inline-block;transition:transform .45s cubic-bezier(.2,.7,.1,1)}
+.campaignHero figcaption>a:hover b{transform:translateX(6px)}
+.faq summary span{display:inline-block;color:var(--pink);transition:transform .5s cubic-bezier(.2,.7,.1,1)}
+.faq details[open] summary span{transform:rotate(135deg)}
+.faq details[open]>p{animation:fqIn .5s cubic-bezier(.2,.7,.1,1)}
+@keyframes fqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.application input{transition:border-color .4s ease,box-shadow .4s ease}
+.application input:focus{border-bottom-color:var(--pink);box-shadow:0 1px 0 var(--pink)}
+.application aside{position:relative;border-left:0;padding-left:18px}
+.application aside:before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--pink);animation:pulseBar 3.2s ease-in-out infinite}
+@keyframes pulseBar{0%,100%{opacity:1}50%{opacity:.35}}
+.heroPhoto img{will-change:transform}
+.dayMenuLinks li{opacity:0;transform:translateY(10px);transition:opacity .25s ease,transform .25s ease}
+.dayMenu.open .dayMenuLinks li{opacity:1;transform:none;transition:opacity .4s ease,transform .5s cubic-bezier(.2,.7,.1,1);transition-delay:calc(var(--i)*45ms + 120ms)}
+.mv .campaignHero img{scale:1.18;transition:scale 2.4s cubic-bezier(.2,.7,.1,1)}
+.mv .campaignHero.in img{scale:1}
+.mv .campaignHero:before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(105deg,transparent 35%,#e9c79126 50%,transparent 65%);transform:translateX(-110%)}
+.mv .campaignHero.in:before{animation:sweep 2.2s .5s cubic-bezier(.4,0,.2,1) 1 forwards}
+@keyframes sweep{to{transform:translateX(110%)}}
+.mv .campaignLogo{transform:scale(.94) translateY(14px)}
+.mv .campaignLogo.in{transform:none}
+@media(prefers-reduced-motion:reduce){
+.mv .campaignHero img{scale:1!important;transition:none!important}
+.mv .campaignHero:before{display:none}
+.mv .w>i,.mv .rv,.mv .statement .sw,.mv .mentorPhoto img{transform:none!important;opacity:1!important;transition:none!important}
+.mv .mentorPhoto:after,.mv .eyebrow.left:before,.mv .quoteGrid blockquote:before{display:none}
+.application aside:before{animation:none}
+.dayMenuLinks li,.dayMenu.open .dayMenuLinks li{opacity:1;transform:none;transition:none}
+}
