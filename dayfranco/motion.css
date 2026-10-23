@@ -40,7 +40,7 @@
 .heroPhoto img{will-change:transform}
 .dayMenuLinks li{opacity:0;transform:translateY(10px);transition:opacity .25s ease,transform .25s ease}
 .dayMenu.open .dayMenuLinks li{opacity:1;transform:none;transition:opacity .4s ease,transform .5s cubic-bezier(.2,.7,.1,1);transition-delay:calc(var(--i)*45ms + 120ms)}
-.mv .campaignHero img{scale:1.18;transition:scale 2.4s cubic-bezier(.2,.7,.1,1)}
+.mv .campaignHero img{scale:1.06;transform-origin:50% 0;transition:scale 2.4s cubic-bezier(.2,.7,.1,1)}
 .mv .campaignHero.in img{scale:1}
 .mv .campaignHero:before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(105deg,transparent 35%,#e9c79126 50%,transparent 65%);transform:translateX(-110%)}
 .mv .campaignHero.in:before{animation:sweep 2.2s .5s cubic-bezier(.4,0,.2,1) 1 forwards}
