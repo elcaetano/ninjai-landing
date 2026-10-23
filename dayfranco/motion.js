@@ -68,8 +68,6 @@
       tick = false;
       const vh = innerHeight;
       if (hero) {
-        const r = hero.parentElement.getBoundingClientRect();
-        if (r.bottom > 0 && r.top < vh) hero.style.transform = `translate3d(0,${Math.max(-28, (vh - r.top) * -.05).toFixed(1)}px,0) scale(1.12)`;
       }
       if (sw.length && st) {
         const r = st.getBoundingClientRect();
